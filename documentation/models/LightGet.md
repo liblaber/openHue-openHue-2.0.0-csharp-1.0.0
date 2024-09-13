@@ -101,12 +101,12 @@ The gammut types supported by hue – A Gamut of early Philips color-only produc
 
 **Properties**
 
-| Name         | Type                         | Required | Description                                                                                                                                                                                                      |
-| :----------- | :--------------------------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Status       | SupportedDynamicStatus       | ❌       | Current status of the lamp with dynamics.                                                                                                                                                                        |
-| StatusValues | List<SupportedDynamicStatus> | ❌       | Statuses in which a lamp could be when playing dynamics.                                                                                                                                                         |
-| Speed        | double                       | ❌       | speed of dynamic palette or effect. The speed is valid for the dynamic palette if the status is dynamic_palette or for the corresponding effect listed in status. In case of status none, the speed is not valid |
-| SpeedValid   | bool                         | ❌       | Indicates whether the value presented in speed is valid                                                                                                                                                          |
+| Name         | Type                           | Required | Description                                                                                                                                                                                                      |
+| :----------- | :----------------------------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Status       | SupportedDynamicStatus         | ❌       | Current status of the lamp with dynamics.                                                                                                                                                                        |
+| StatusValues | List`<SupportedDynamicStatus>` | ❌       | Statuses in which a lamp could be when playing dynamics.                                                                                                                                                         |
+| Speed        | double                         | ❌       | speed of dynamic palette or effect. The speed is valid for the dynamic palette if the status is dynamic_palette or for the corresponding effect listed in status. In case of status none, the speed is not valid |
+| SpeedValid   | bool                           | ❌       | Indicates whether the value presented in speed is valid                                                                                                                                                          |
 
 # LightGetSignaling
 
@@ -114,11 +114,11 @@ Feature containing signaling properties.
 
 **Properties**
 
-| Name         | Type                   | Required | Description                                                                                            |
-| :----------- | :--------------------- | :------- | :----------------------------------------------------------------------------------------------------- |
-| SignalValues | List<SupportedSignals> | ❌       |                                                                                                        |
-| EstimatedEnd | long                   | ❌       | Timestamp indicating when the active signal is expected to end. Value is not set if there is no_signal |
-| Colors       | List<Color>            | ❌       | Colors that were provided for the active effect.                                                       |
+| Name         | Type                     | Required | Description                                                                                            |
+| :----------- | :----------------------- | :------- | :----------------------------------------------------------------------------------------------------- |
+| SignalValues | List`<SupportedSignals>` | ❌       |                                                                                                        |
+| EstimatedEnd | long                     | ❌       | Timestamp indicating when the active signal is expected to end. Value is not set if there is no_signal |
+| Colors       | List`<Color>`            | ❌       | Colors that were provided for the active effect.                                                       |
 
 # LightGetMode
 
@@ -133,13 +133,13 @@ Feature containing signaling properties.
 
 **Properties**
 
-| Name          | Type                        | Required | Description                                                                                                                         |
-| :------------ | :-------------------------- | :------- | :---------------------------------------------------------------------------------------------------------------------------------- |
-| Points        | List<Color>                 | ❌       | Collection of gradients points. For control of the gradient points through a PUT a minimum of 2 points need to be provided.         |
-| Mode          | SupportedGradientMode       | ❌       | Mode in which the points are currently being deployed. If not provided during PUT/POST it will be defaulted to interpolated_palette |
-| PointsCapable | long                        | ❌       | Number of color points that gradient lamp is capable of showing with gradience.                                                     |
-| ModeValues    | List<SupportedGradientMode> | ❌       | Modes a gradient device can deploy the gradient palette of colors                                                                   |
-| PixelCount    | long                        | ❌       | Number of pixels in the device                                                                                                      |
+| Name          | Type                          | Required | Description                                                                                                                         |
+| :------------ | :---------------------------- | :------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| Points        | List`<Color>`                 | ❌       | Collection of gradients points. For control of the gradient points through a PUT a minimum of 2 points need to be provided.         |
+| Mode          | SupportedGradientMode         | ❌       | Mode in which the points are currently being deployed. If not provided during PUT/POST it will be defaulted to interpolated_palette |
+| PointsCapable | long                          | ❌       | Number of color points that gradient lamp is capable of showing with gradience.                                                     |
+| ModeValues    | List`<SupportedGradientMode>` | ❌       | Modes a gradient device can deploy the gradient palette of colors                                                                   |
+| PixelCount    | long                          | ❌       | Number of pixels in the device                                                                                                      |
 
 # LightGetEffects
 
@@ -147,12 +147,12 @@ Basic feature containing effect properties.
 
 **Properties**
 
-| Name         | Type                   | Required | Description                                                              |
-| :----------- | :--------------------- | :------- | :----------------------------------------------------------------------- |
-| Status       | SupportedEffects       | ❌       |                                                                          |
-| StatusValues | List<SupportedEffects> | ❌       | Possible status values in which a light could be when playing an effect. |
-| Effect       | SupportedEffects       | ❌       |                                                                          |
-| EffectValues | List<SupportedEffects> | ❌       | Possible status values in which a light could be when playing an effect. |
+| Name         | Type                     | Required | Description                                                              |
+| :----------- | :----------------------- | :------- | :----------------------------------------------------------------------- |
+| Status       | SupportedEffects         | ❌       |                                                                          |
+| StatusValues | List`<SupportedEffects>` | ❌       | Possible status values in which a light could be when playing an effect. |
+| Effect       | SupportedEffects         | ❌       |                                                                          |
+| EffectValues | List`<SupportedEffects>` | ❌       | Possible status values in which a light could be when playing an effect. |
 
 # LightGetTimedEffects
 
@@ -160,13 +160,13 @@ Basic feature containing timed effect properties.
 
 **Properties**
 
-| Name         | Type                        | Required | Description                                                                                                                                                                                                                                                                                                                             |
-| :----------- | :-------------------------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Effect       | SupportedTimedEffects       | ❌       | Current status values the light is in regarding timed effects                                                                                                                                                                                                                                                                           |
-| EffectValues | List<SupportedTimedEffects> | ❌       | Possible timed effect values you can set in a light                                                                                                                                                                                                                                                                                     |
-| Status       | SupportedTimedEffects       | ❌       | Current status values the light is in regarding timed effects                                                                                                                                                                                                                                                                           |
-| StatusValues | List<SupportedTimedEffects> | ❌       | Possible status values in which a light could be when playing a timed effect.                                                                                                                                                                                                                                                           |
-| Duration     | long                        | ❌       | Duration is mandatory when timed effect is set except for no_effect. Resolution decreases for a larger duration. e.g Effects with duration smaller than a minute will be rounded to a resolution of 1s, while effects with duration larger than an hour will be arounded up to a resolution of 300s. Duration has a max of 21600000 ms. |
+| Name         | Type                          | Required | Description                                                                                                                                                                                                                                                                                                                             |
+| :----------- | :---------------------------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Effect       | SupportedTimedEffects         | ❌       | Current status values the light is in regarding timed effects                                                                                                                                                                                                                                                                           |
+| EffectValues | List`<SupportedTimedEffects>` | ❌       | Possible timed effect values you can set in a light                                                                                                                                                                                                                                                                                     |
+| Status       | SupportedTimedEffects         | ❌       | Current status values the light is in regarding timed effects                                                                                                                                                                                                                                                                           |
+| StatusValues | List`<SupportedTimedEffects>` | ❌       | Possible status values in which a light could be when playing a timed effect.                                                                                                                                                                                                                                                           |
+| Duration     | long                          | ❌       | Duration is mandatory when timed effect is set except for no_effect. Resolution decreases for a larger duration. e.g Effects with duration smaller than a minute will be rounded to a resolution of 1s, while effects with duration larger than an hour will be arounded up to a resolution of 300s. Duration has a max of 21600000 ms. |
 
 # LightGetPowerup
 
