@@ -2,6 +2,8 @@
 
 using System.Net.Http.Json;
 using OpenHue.Http;
+using OpenHue.Http.Exceptions;
+using OpenHue.Http.Extensions;
 using OpenHue.Http.Serialization;
 using OpenHue.Models;
 
@@ -22,9 +24,9 @@ public class ZoneService : BaseService
         var response = await _httpClient
             .SendAsync(request, cancellationToken)
             .ConfigureAwait(false);
-        response.EnsureSuccessStatusCode();
 
         return await response
+                .EnsureSuccessfulResponse()
                 .Content.ReadFromJsonAsync<GetZonesOkResponse>(
                     _jsonSerializerOptions,
                     cancellationToken
@@ -47,9 +49,9 @@ public class ZoneService : BaseService
         var response = await _httpClient
             .SendAsync(request, cancellationToken)
             .ConfigureAwait(false);
-        response.EnsureSuccessStatusCode();
 
         return await response
+                .EnsureSuccessfulResponse()
                 .Content.ReadFromJsonAsync<CreateZoneOkResponse>(
                     _jsonSerializerOptions,
                     cancellationToken
@@ -73,9 +75,9 @@ public class ZoneService : BaseService
         var response = await _httpClient
             .SendAsync(request, cancellationToken)
             .ConfigureAwait(false);
-        response.EnsureSuccessStatusCode();
 
         return await response
+                .EnsureSuccessfulResponse()
                 .Content.ReadFromJsonAsync<GetZoneOkResponse>(
                     _jsonSerializerOptions,
                     cancellationToken
@@ -102,9 +104,9 @@ public class ZoneService : BaseService
         var response = await _httpClient
             .SendAsync(request, cancellationToken)
             .ConfigureAwait(false);
-        response.EnsureSuccessStatusCode();
 
         return await response
+                .EnsureSuccessfulResponse()
                 .Content.ReadFromJsonAsync<UpdateZoneOkResponse>(
                     _jsonSerializerOptions,
                     cancellationToken
@@ -128,9 +130,9 @@ public class ZoneService : BaseService
         var response = await _httpClient
             .SendAsync(request, cancellationToken)
             .ConfigureAwait(false);
-        response.EnsureSuccessStatusCode();
 
         return await response
+                .EnsureSuccessfulResponse()
                 .Content.ReadFromJsonAsync<DeleteZoneOkResponse>(
                     _jsonSerializerOptions,
                     cancellationToken

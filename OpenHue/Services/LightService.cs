@@ -2,6 +2,8 @@
 
 using System.Net.Http.Json;
 using OpenHue.Http;
+using OpenHue.Http.Exceptions;
+using OpenHue.Http.Extensions;
 using OpenHue.Http.Serialization;
 using OpenHue.Models;
 
@@ -22,9 +24,9 @@ public class LightService : BaseService
         var response = await _httpClient
             .SendAsync(request, cancellationToken)
             .ConfigureAwait(false);
-        response.EnsureSuccessStatusCode();
 
         return await response
+                .EnsureSuccessfulResponse()
                 .Content.ReadFromJsonAsync<GetLightsOkResponse>(
                     _jsonSerializerOptions,
                     cancellationToken
@@ -48,9 +50,9 @@ public class LightService : BaseService
         var response = await _httpClient
             .SendAsync(request, cancellationToken)
             .ConfigureAwait(false);
-        response.EnsureSuccessStatusCode();
 
         return await response
+                .EnsureSuccessfulResponse()
                 .Content.ReadFromJsonAsync<GetLightOkResponse>(
                     _jsonSerializerOptions,
                     cancellationToken
@@ -77,9 +79,9 @@ public class LightService : BaseService
         var response = await _httpClient
             .SendAsync(request, cancellationToken)
             .ConfigureAwait(false);
-        response.EnsureSuccessStatusCode();
 
         return await response
+                .EnsureSuccessfulResponse()
                 .Content.ReadFromJsonAsync<UpdateLightOkResponse>(
                     _jsonSerializerOptions,
                     cancellationToken
