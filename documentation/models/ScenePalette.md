@@ -4,12 +4,12 @@ Group of colors that describe the palette of colors to be used when playing dyna
 
 **Properties**
 
-| Name             | Type                                | Required | Description |
-| :--------------- | :---------------------------------- | :------- | :---------- |
-| Color            | List`<ColorPaletteGet>`             | ❌       |             |
-| Dimming          | List`<Dimming>`                     | ❌       |             |
-| ColorTemperature | List`<ColorTemperaturePalettePost>` | ❌       |             |
-| Effects          | List`<ScenePaletteEffects>`         | ❌       |             |
+| Name             | Type                              | Required | Description |
+| :--------------- | :-------------------------------- | :------- | :---------- |
+| Color            | List<ColorPaletteGet>             | ❌       |             |
+| Dimming          | List<Dimming>                     | ❌       |             |
+| ColorTemperature | List<ColorTemperaturePalettePost> | ❌       |             |
+| Effects          | List<ScenePaletteEffects>         | ❌       |             |
 
 # ScenePaletteEffects
 

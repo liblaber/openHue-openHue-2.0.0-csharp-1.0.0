@@ -2,11 +2,11 @@
 
 **Properties**
 
-| Name     | Type                       | Required | Description                                          |
-| :------- | :------------------------- | :------- | :--------------------------------------------------- |
-| Type\_   | string                     | ❌       | Type of the supported resources (always `room` here) |
-| Children | List`<ResourceIdentifier>` | ❌       | Child devices/services to group by the derived group |
-| Metadata | RoomPutMetadata            | ❌       | configuration object for a room                      |
+| Name     | Type                     | Required | Description                                          |
+| :------- | :----------------------- | :------- | :--------------------------------------------------- |
+| Type\_   | string                   | ❌       | Type of the supported resources (always `room` here) |
+| Children | List<ResourceIdentifier> | ❌       | Child devices/services to group by the derived group |
+| Metadata | RoomPutMetadata          | ❌       | configuration object for a room                      |
 
 # RoomPutMetadata
 

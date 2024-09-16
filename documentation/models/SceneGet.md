@@ -8,7 +8,7 @@
 | Id          | string             | ❌       | Unique identifier representing a specific resource instance                          |
 | IdV1        | string             | ❌       | Clip v1 resource identifier                                                          |
 | Owner       | ResourceIdentifier | ❌       |                                                                                      |
-| Actions     | List`<ActionGet>`  | ❌       | List of actions to be executed synchronously on recall                               |
+| Actions     | List<ActionGet>    | ❌       | List of actions to be executed synchronously on recall                               |
 | Metadata    | SceneMetadata      | ❌       |                                                                                      |
 | Group       | ResourceIdentifier | ❌       |                                                                                      |
 | Palette     | ScenePalette       | ❌       | Group of colors that describe the palette of colors to be used when playing dynamics |

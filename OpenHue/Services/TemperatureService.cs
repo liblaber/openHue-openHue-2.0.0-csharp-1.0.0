@@ -2,6 +2,8 @@
 
 using System.Net.Http.Json;
 using OpenHue.Http;
+using OpenHue.Http.Exceptions;
+using OpenHue.Http.Extensions;
 using OpenHue.Http.Serialization;
 using OpenHue.Models;
 
@@ -22,9 +24,9 @@ public class TemperatureService : BaseService
         var response = await _httpClient
             .SendAsync(request, cancellationToken)
             .ConfigureAwait(false);
-        response.EnsureSuccessStatusCode();
 
         return await response
+                .EnsureSuccessfulResponse()
                 .Content.ReadFromJsonAsync<GetTemperaturesOkResponse>(
                     _jsonSerializerOptions,
                     cancellationToken
@@ -51,9 +53,9 @@ public class TemperatureService : BaseService
         var response = await _httpClient
             .SendAsync(request, cancellationToken)
             .ConfigureAwait(false);
-        response.EnsureSuccessStatusCode();
 
         return await response
+                .EnsureSuccessfulResponse()
                 .Content.ReadFromJsonAsync<GetTemperatureOkResponse>(
                     _jsonSerializerOptions,
                     cancellationToken
@@ -83,9 +85,9 @@ public class TemperatureService : BaseService
         var response = await _httpClient
             .SendAsync(request, cancellationToken)
             .ConfigureAwait(false);
-        response.EnsureSuccessStatusCode();
 
         return await response
+                .EnsureSuccessfulResponse()
                 .Content.ReadFromJsonAsync<UpdateTemperatureOkResponse>(
                     _jsonSerializerOptions,
                     cancellationToken

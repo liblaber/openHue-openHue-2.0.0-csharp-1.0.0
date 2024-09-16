@@ -4,11 +4,11 @@ Feature containing basic signaling properties.
 
 **Properties**
 
-| Name     | Type          | Required | Description                                                                                                                                                                                                                                                                          |
-| :------- | :------------ | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Signal\_ | Signal        | ❌       | - `no_signal`: No signal is active. Write “no_signal” to stop active signal. - `on_off`: Toggles between max brightness and Off in fixed color. - `on_off_color`: Toggles between off and max brightness with color provided. - `alternating`: Alternates between 2 provided colors. |
-| Duration | long          | ❌       | Duration has a max of 65534000 ms and a stepsize of 1 second. Values inbetween steps will be rounded. Duration is ignored for `no_signal`.                                                                                                                                           |
-| Color    | List`<Color>` | ❌       | List of colors to apply to the signal (not supported by all signals)                                                                                                                                                                                                                 |
+| Name     | Type        | Required | Description                                                                                                                                                                                                                                                                          |
+| :------- | :---------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Signal\_ | Signal      | ❌       | - `no_signal`: No signal is active. Write “no_signal” to stop active signal. - `on_off`: Toggles between max brightness and Off in fixed color. - `on_off_color`: Toggles between off and max brightness with color provided. - `alternating`: Alternates between 2 provided colors. |
+| Duration | long        | ❌       | Duration has a max of 65534000 ms and a stepsize of 1 second. Values inbetween steps will be rounded. Duration is ignored for `no_signal`.                                                                                                                                           |
+| Color    | List<Color> | ❌       | List of colors to apply to the signal (not supported by all signals)                                                                                                                                                                                                                 |
 
 # Signal
 

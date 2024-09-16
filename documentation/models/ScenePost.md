@@ -4,7 +4,7 @@
 
 | Name        | Type               | Required | Description                                                                          |
 | :---------- | :----------------- | :------- | :----------------------------------------------------------------------------------- |
-| Actions     | List`<ActionPost>` | ✅       | List of actions to be executed synchronously on recall                               |
+| Actions     | List<ActionPost>   | ✅       | List of actions to be executed synchronously on recall                               |
 | Metadata    | SceneMetadata      | ✅       |                                                                                      |
 | Group       | ResourceIdentifier | ✅       |                                                                                      |
 | Type\_      | ScenePostType      | ❌       |                                                                                      |

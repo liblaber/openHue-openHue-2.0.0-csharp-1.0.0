@@ -2,16 +2,16 @@
 
 **Properties**
 
-| Name        | Type                       | Required | Description                                                        |
-| :---------- | :------------------------- | :------- | :----------------------------------------------------------------- |
-| Type\_      | DeviceGetType              | ❌       |                                                                    |
-| Id          | string                     | ❌       | Unique identifier representing a specific resource instance        |
-| IdV1        | string                     | ❌       | Clip v1 resource identifier                                        |
-| Owner       | ResourceIdentifier         | ❌       |                                                                    |
-| ProductData | ProductData                | ❌       |                                                                    |
-| Metadata    | DeviceGetMetadata          | ❌       |                                                                    |
-| Usertest    | DeviceGetUsertest          | ❌       |                                                                    |
-| Services    | List`<ResourceIdentifier>` | ❌       | References all services providing control and state of the device. |
+| Name        | Type                     | Required | Description                                                        |
+| :---------- | :----------------------- | :------- | :----------------------------------------------------------------- |
+| Type\_      | DeviceGetType            | ❌       |                                                                    |
+| Id          | string                   | ❌       | Unique identifier representing a specific resource instance        |
+| IdV1        | string                   | ❌       | Clip v1 resource identifier                                        |
+| Owner       | ResourceIdentifier       | ❌       |                                                                    |
+| ProductData | ProductData              | ❌       |                                                                    |
+| Metadata    | DeviceGetMetadata        | ❌       |                                                                    |
+| Usertest    | DeviceGetUsertest        | ❌       |                                                                    |
+| Services    | List<ResourceIdentifier> | ❌       | References all services providing control and state of the device. |
 
 # DeviceGetType
 
